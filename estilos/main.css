@@ -100,12 +100,35 @@
 .index__aside__table {
   background-color: slategray;
   width: 45vw;
-  margin: 10px 0px 0px 25px;
-  padding: 8px 0px 2px 0px;
+  margin: 10px 0px 0px 0px;
+  padding: 6px 10px 4px 10px;
   border: solid 1px black;
 }
 
+.index__aside__tbody {
+  text-align: center;
+  font-family: "Montserrat", sans-serif, "Regular 400";
+}
+
+.thead {
+  border-bottom: 1px solid rgb(199, 196, 196);
+}
+
 #trId th {
+  text-align: center;
+  font-family: "Montserrat", sans-serif, "Regular 400";
+  border: 0px 0px 2px 1px solid black;
+}
+
+#tabla button {
+  border: 1.5px solid black;
+  background-color: white;
+  padding: 5px 3px 5px 3px;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif, "Regular 400";
+  width: 10vw;
+}
+#tabla td {
   text-align: center;
   font-family: "Montserrat", sans-serif, "Regular 400";
 }/*# sourceMappingURL=main.css.map */
