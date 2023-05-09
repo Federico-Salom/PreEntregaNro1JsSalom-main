@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/main.css">
+    <title>Proyecto Final 1</title>
+</head>
+<body>
+    <main>
+        <h1 class="index__section__title">Bienvenido a su stock de productos</h1>
+    <div class="index__div__flex">
+        <section>
+            <form id="form" class="index__form__subida">
+                <h2 class="index__form__subida__title">Subir Productos</h2>
+                <div class="index__section__productos">
+                    <input class="index__section__input__id" type="number" placeholder=" Ingrese el Id del producto" name="id">
+                    <input class="index__section__input__nombre" type="text" placeholder=" Ingrese el nombre del producto" name="name">
+                    <input class="index__section__input__valor" type="text" placeholder=" Ingrese el tipo de producto" name="tipo">
+                    <input class="index__section__input__valor" type="number" placeholder=" Ingrese el valor del producto" name="valor">
+                    <input class="index__section__input__cantidad" type="number" placeholder=" Ingrese La cantidad de productos" name="cantidad">
+                </div>
+            <div class="index__section__botones">
+                <button class="index__section__enviar" type="submit">Agregar</button>
+                <button class="index__section__restablecer" type="reset">Restablecer</button>
+            </div>
+            </form>
+        </section>
+        <aside class="index__aside__flex">
+            <table id="tabla" class="index__aside__table">
+                <thead class="thead">
+                    <tr id="trId">
+                        <th># item</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="items">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th id="total"></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </aside>
+    </div>
+    </main>
+<script src="./javascript/javaScript.js"></script>
+</body>
+</html>
