@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/main.css">
-    <title>Proyecto Final 1</title>
+    <title>Proyecto Final</title>
 </head>
 <body>
-    <main>
+    <main  class="index__main__flex">
         <h1 class="index__section__title">Bienvenido a su stock de productos</h1>
     <div class="index__div__flex">
         <section>
@@ -25,7 +26,7 @@
                     <input class="index__section__input__cantidad" type="number" placeholder=" Ingrese La cantidad de productos" name="cantidad">
                 </div>
             <div class="index__section__botones">
-                <button class="index__section__enviar" type="submit">Agregar</button>
+                <button id="submit" class="index__section__enviar" type="submit">Agregar</button>
                 <button class="index__section__restablecer" type="reset">Restablecer</button>
             </div>
             </form>
@@ -47,6 +48,11 @@
             </table>
         </aside>
     </div>
+        <div>
+            <h2 class="index__div__title" >Reseñas</h2>
+            <p id="index__p__animacion"></p>
+            <div id="contenedorComentarios" class="comentarios"></div>
+        </div>
     </main>
 <script src="./javascript/javaScript.js"></script>
 </body>

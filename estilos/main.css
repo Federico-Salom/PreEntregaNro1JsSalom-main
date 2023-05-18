@@ -1,5 +1,5 @@
-.index__main__flex {
-  display: flex;
+body {
+  background-image: url("../images/almacen_fondo.webp");
 }
 
 .index__section__flex {
@@ -18,13 +18,8 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
-  border: 5px solid white;
-  background-color: rgb(222, 248, 255);
+  background-color: rgb(234, 238, 255);
   border: 2px solid black;
-}
-
-.index__main__flex {
-  display: flex;
 }
 
 .index__section__productos {
@@ -39,10 +34,6 @@
   font-family: "Montserrat", sans-serif, "Regular 400";
   width: 32vw;
   height: 25px;
-}
-
-.index__main__flex {
-  display: flex;
 }
 
 .index__section__botones :hover {
@@ -79,11 +70,8 @@
   font-family: "Montserrat", sans-serif, "Regular 400";
 }
 
-.index__main__flex {
-  display: flex;
-}
-
 .index__section__title {
+  color: aliceblue;
   text-align: center;
   font-family: "Montserrat", sans-serif, "Regular 400";
 }
@@ -98,7 +86,7 @@
 }
 
 .index__aside__table {
-  background-color: slategray;
+  background-color: rgb(234, 238, 255);
   width: 45vw;
   margin: 10px 0px 0px 0px;
   padding: 6px 10px 4px 10px;
@@ -131,4 +119,24 @@
 #tabla td {
   text-align: center;
   font-family: "Montserrat", sans-serif, "Regular 400";
+}
+
+.index__div__title {
+  margin: -5px 0px 0px 0px;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Montserrat", sans-serif, "Regular 400";
+}
+
+#index__p__animacion {
+  color: aliceblue;
+  text-align: center;
+  font-family: "Montserrat", sans-serif, "Regular 200";
+}
+
+#contenedorComentarios div {
+  margin: 3px 0px 3px 0px;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Montserrat", sans-serif, "Regular 200";
 }/*# sourceMappingURL=main.css.map */

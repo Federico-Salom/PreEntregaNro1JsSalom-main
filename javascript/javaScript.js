@@ -40,10 +40,28 @@ const insertarFila = (producto) => {
   btnEliminar.innerText = "Eliminar";
 
   btnEliminar.onclick = () => {
-    const index = products.indexOf(producto);
-    table.deleteRow(index + 1);
-    products.splice(index, 1);
-    localStorage.setItem("productos", JSON.stringify(products));
+    Swal.fire({
+      title: 'Estas seguro?',
+      text: "No podras recuperarlo",
+      icon: 'Atencion!',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Si, Eliminalo!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const index = products.indexOf(producto);
+        table.deleteRow(index + 1);
+        products.splice(index, 1);
+        localStorage.setItem("productos", JSON.stringify(products));
+        Swal.fire(
+          'Eliminado!',
+          'Su producto a sido borrado...',
+          'success'
+        )
+      }
+    })
   };
 
   td.appendChild(btnEliminar);
@@ -62,9 +80,33 @@ form.addEventListener("submit", (event) => {
 
   const producto = { id, name, tipo, valor, cantidad };
 
-  console.log(producto);
   insertarFila(producto);
   agregarProducto(producto);
 });
 
 cargarTablaInicial();
+
+function cargarComment(comment) {
+  const contenedorComments = document.getElementById("contenedorComentarios");
+  const commentDiv = document.createElement("div");
+  commentDiv.innerHTML = comment.body;
+  contenedorComments.appendChild(commentDiv);
+}
+
+async function cargarReseñas() {
+  const cargandoElement = document.getElementById("index__p__animacion");
+  cargandoElement.innerHTML = "Cargando las reseñas Mi King bello UwU <3"
+  const response = await fetch("https://dummyjson.com/comments?limit=3", {
+    method: "GET",
+  })
+  const json = await response.json(); 
+  cargandoElement.innerHTML = ""
+  json.comments.forEach((comment) => cargarComment(comment));
+}
+/*     .then((response) => response.json())
+    .then((data) => {
+
+    });
+} */
+
+cargarReseñas();

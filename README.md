@@ -1,1 +1,1 @@
-﻿# Tercer Entrega del proyecto final de JavaScript
+﻿# Entrega del proyecto final de JavaScript
